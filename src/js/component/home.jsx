@@ -1,26 +1,48 @@
-import React from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import React, { useCallback, useState, useRef } from 'react';
 
-//create your first component
-const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+import { Calendar } from '@natscale/react-calendar';
+
+import '@natscale/react-calendar/dist/main.css';
+
+const monthsLabel = {
+	0: 'Enero',
+	1: 'Febrero',
+	2: 'Marzo',
+	3: 'Abril',
+	4: 'Mayo',
+	5: 'Junio',
+    6: 'Julio',
+ 	7: 'Agosto',
+    8: 'Septiembre',
+    9: 'Octubre',
+    10: 'Noviembre',
+    11: 'Diciembre',
 };
 
-export default Home;
+const weekDaysLabel = {
+	0: 'Dom',
+	1: 'Lun',
+	2: 'Mar',
+	3: 'Mie',
+	4: 'Jue',
+	5: 'Vie',
+	6: 'Sab',
+  };
+
+  export default function App() {
+	const [value, setValue] = useState(new Date());
+  
+	const onChange = useCallback(
+	  (val) => {
+		setValue(val);
+	  },
+	  [setValue],
+	);
+  
+	return <Calendar size={420} fontSize={18} useDarkMode initialView="months" isMultiSelector weekDaysLabel={weekDaysLabel} monthsLabel={monthsLabel} value={value} onChange={onChange} />;
+  }
+
+
+
+
