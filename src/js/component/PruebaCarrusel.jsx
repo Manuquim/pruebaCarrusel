@@ -1,4 +1,5 @@
-
+import React from "react";
+import ReactDOM from "react-dom";
 import Carousel from 'react-bootstrap/Carousel';
 
 function PruebaCarrusel() {
