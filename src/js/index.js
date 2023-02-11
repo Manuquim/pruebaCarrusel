@@ -6,7 +6,7 @@ import ReactDOM from "react-dom";
 
 
 //import your own components
-import PruebaCarrusel from "./component/PruebaCarrusel.jsx";
+import PruebaCarrusel from "./component/PruebaCarrusel/PruebaCarrusel.jsx";
 
 //render your react application
 ReactDOM.render(<PruebaCarrusel />, document.querySelector("#app"));
