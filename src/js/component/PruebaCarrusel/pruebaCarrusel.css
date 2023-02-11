@@ -1,5 +1,14 @@
 body{
     background-color: #F4ECE1;
-    /*font-family: 'Amatic SC', cursive;*/
-    font-family: 'Caveat', cursive;
+    background-image: url("https://i.pinimg.com/564x/1e/e1/2d/1ee12de8b283da7f6b8fa8aaca0cf3d2.jpg");
+    font-family: 'Amatic SC', cursive;
+    /*font-family: 'Caveat', cursive;*/
+    color:black;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+h2{
+    text-align: center;
 }
